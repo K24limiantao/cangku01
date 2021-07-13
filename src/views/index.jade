@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  if (!user)
+    a(href="/login") 登录
+    br
+    a(href="/register") 注册
+  if (user)
+    p 您当前登录的身份为： #{user.username}
+    a(href="/logout") Logout

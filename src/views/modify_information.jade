@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .container
+    h1 修改名字页面
+    p.lead 请输入要修改的信息
+    br
+    form(role='form', action="/user",method="post", style='max-width: 300px;')
+      .form-group
+        input.form-control(type='text', name="newusername", placeholder='输入新名字')
+      button.btn.btn-default(type='submit') 确认
+      &nbsp;
+      a(href='/user')
+        button.btn.btn-primary(type="button") 取消
